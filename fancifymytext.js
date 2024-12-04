@@ -11,11 +11,14 @@ function applyStyle() {
     const textArea = document.getElementById("textArea");
     const fancyShmancy = document.getElementById("fancyShmancy");
 
+    // Show alert when the radio button changes
     if (fancyShmancy.checked) {
+        alert("FancyShmancy selected!");
         textArea.style.fontWeight = "bold";
         textArea.style.color = "blue";
         textArea.style.textDecoration = "underline";
     } else {
+        alert("BoringBetty selected!");
         textArea.style.fontWeight = "normal";
         textArea.style.color = "black";
         textArea.style.textDecoration = "none";
