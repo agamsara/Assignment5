@@ -2,13 +2,15 @@
 function makeTextBigger() {
     const textArea = document.getElementById("textArea");
     textArea.style.fontSize = "24pt";
+    alert("Hello, world!");
+
 }
 
-// Function for the FancyShmancy and BoringBetty radio buttons
+// Function to apply FancyShmancy and BoringBetty styles
 function applyStyle() {
     const textArea = document.getElementById("textArea");
     const fancyShmancy = document.getElementById("fancyShmancy");
-    
+
     if (fancyShmancy.checked) {
         textArea.style.fontWeight = "bold";
         textArea.style.color = "blue";
@@ -23,7 +25,8 @@ function applyStyle() {
 // Function for the Moo button
 function addMoo() {
     const textArea = document.getElementById("textArea");
-    let sentences = textArea.value.split(".");
+    let text = textArea.value.toUpperCase(); // Convert text to uppercase
+    let sentences = text.split(".");
     sentences = sentences.map(sentence => sentence.trim() + "-Moo");
     textArea.value = sentences.join(". ");
 }
@@ -34,4 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("fancyShmancy").onchange = applyStyle;
     document.getElementById("boringBetty").onchange = applyStyle;
     document.getElementById("mooButton").onclick = addMoo;
+    document.getElementById("elementID").style.propertyName = "value";
+
 });
